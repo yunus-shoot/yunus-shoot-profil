@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUNUS SHOOT | Professional Photography Portfolio</title>
+    <meta name="description" content="Portofolio fotografi profesional oleh Yunus Shoot. Capturing moments, creating stories. Melayani sesi foto portrait, wedding, event, dan lainnya.">
+    
+    <!-- Fonts: Playfair Display untuk kesan editorial/elegan, Inter untuk teks deskripsi yang bersih -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Library ringan untuk styling cepat) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    
+    <!-- Phosphor Icons (Ikon ringan) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="z-50 relative">
+                <img src="yunus-shoot-logo.png" alt="Yunus Shoot Digital Printing Logo" class="h-10 md:h-12 w-auto object-contain drop-shadow-lg">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-sm tracking-widest uppercase hover:text-gray-300 transition">Beranda</a>
+                <a href="#portfolio" class="text-sm tracking-widest uppercase hover:text-gray-300 transition">Portofolio</a>
+                <a href="#about" class="text-sm tracking-widest uppercase hover:text-gray-300 transition">Tentang</a>
+                <a href="#packages" class="text-sm tracking-widest uppercase hover:text-gray-300 transition">Paket &amp; Harga</a>
+                <a href="#contact" class="text-sm tracking-widest uppercase hover:text-gray-300 transition">Kontak</a>
+                <a href="#contact" class="px-6 py-2 border border-white text-sm tracking-widest uppercase hover:bg-white hover:text-black transition duration-300">
+                    Pesan Sesi
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white focus:outline-none">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-black flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+            <a href="#home" class="mobile-link text-2xl font-serif tracking-wide hover:text-gray-400">Beranda</a>
+            <a href="#portfolio" class="mobile-link text-2xl font-serif tracking-wide hover:text-gray-400">Portofolio</a>
+            <a href="#about" class="mobile-link text-2xl font-serif tracking-wide hover:text-gray-400">Tentang</a>
+            <a href="#packages" class="mobile-link text-2xl font-serif tracking-wide hover:text-gray-400">Paket &amp; Harga</a>
+            <a href="#contact" class="mobile-link text-2xl font-serif tracking-wide hover:text-gray-400">Kontak</a>
+            <a href="#contact" class="mobile-link px-8 py-3 border border-white text-lg tracking-widest uppercase hover:bg-white hover:text-black transition">Pesan Sesi</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image (Ganti dengan karya terbaik Anda) -->
+        <div class="absolute inset-0 z-0">
+            <img src="logo1.png" alt="Cinematic Wedding Photography" class="w-full h-full object-cover object-center opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-brand-black"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 pb-20 max-w-4xl mx-auto">
+            <p class="text-sm md:text-base tracking-[0.3em] uppercase text-gray-300 mb-4 reveal">Sejak 2024</p>
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl mb-5 text-shadow leading-[1.05] reveal" style="transition-delay: 0.1s;">
+                Mengabadikan Momen,<br><span class="italic text-gray-300">Merangkai Cerita.</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light text-gray-200 mb-8 max-w-2xl mx-auto text-shadow reveal" style="transition-delay: 0.2s;">
+                Setiap bingkai menceritakan sebuah kisah. Setiap momen pantas untuk dikenang dengan keanggunan dan keaslian.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 reveal" style="transition-delay: 0.3s;">
+                <a href="#portfolio" class="px-8 py-3 bg-white text-black text-sm tracking-widest uppercase hover:bg-gray-200 transition duration-300 w-full sm:w-auto">Jelajahi Karya Saya</a>
+                <a href="#contact" class="px-8 py-3 border border-white text-white text-sm tracking-widest uppercase hover:bg-white/10 transition duration-300 w-full sm:w-auto">Pesan Sesi</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#featured" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-gray-400 hover:text-white transition z-10">
+            <span class="text-xs tracking-widest uppercase mb-2">Gulir</span>
+            <i class="ph ph-arrow-down text-xl"></i>
+        </a>
+    </header>
+
+    <!-- Featured Works Section -->
+    <section id="featured" class="py-24 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-serif text-3xl md:text-5xl mb-4">Karya Pilihan</h2>
+                <div class="w-16 h-px bg-gray-500 mx-auto"></div>
+            </div>
+
+            <!-- Featured Item 1 (Image Left, Text Right) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-24 reveal">
+                <div class="img-hover-zoom overflow-hidden rounded-sm aspect-[4/5] md:aspect-auto md:h-[600px]">
+                    <img src="logo1.png" alt="Elegant Wedding Portrait" class="w-full h-full object-cover">
+                </div>
+                <div class="md:pl-10">
+                    <span class="text-sm tracking-widest text-gray-400 uppercase">Pernikahan • 2024</span>
+                    <h3 class="font-serif text-3xl md:text-4xl mt-3 mb-6">Janji Suci</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-8">
+                        Menangkap kemurnian dan keanggunan momen pernikahan. Setiap detail pakaian tradisional dan ekspresi bahagia diabadikan untuk menjadi memori abadi.
+                    </p>
+                    <a href="#portfolio" class="text-sm tracking-widest uppercase border-b border-white pb-1 hover:text-gray-400 hover:border-gray-400 transition">Lihat Galeri Penuh</a>
+                </div>
+            </div>
+
+            <!-- Featured Item 2 (Text Left, Image Right) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center reveal">
+                <div class="order-2 md:order-1 md:pr-10">
+                    <span class="text-sm tracking-widest text-gray-400 uppercase">Potret • 2024</span>
+                    <h3 class="font-serif text-3xl md:text-4xl mt-3 mb-6">Keanggunan Editorial</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-8">
+                        Sesi portrait dengan pendekatan editorial yang menonjolkan karakter dan pesona subjek melalui pencahayaan dan komposisi yang dramatis.
+                    </p>
+                    <a href="#portfolio" class="text-sm tracking-widest uppercase border-b border-white pb-1 hover:text-gray-400 hover:border-gray-400 transition">Lihat Galeri Penuh</a>
+                </div>
+                <div class="order-1 md:order-2 img-hover-zoom overflow-hidden rounded-sm aspect-[4/5] md:aspect-auto md:h-[600px]">
+                    <img src="logo1.png" alt="Editorial Portrait" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section id="portfolio" class="py-24 bg-brand-dark min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="font-serif text-3xl md:text-5xl mb-4">Portofolio</h2>
+                <div class="w-16 h-px bg-gray-500 mx-auto"></div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-12 reveal" id="gallery-filters">
+                <button class="filter-btn active text-sm tracking-widest uppercase text-gray-400 hover:text-white pb-1 transition" data-filter="all">Semua Karya</button>
+                <button class="filter-btn text-sm tracking-widest uppercase text-gray-400 hover:text-white pb-1 transition" data-filter="wedding">Pernikahan</button>
+                <button class="filter-btn text-sm tracking-widest uppercase text-gray-400 hover:text-white pb-1 transition" data-filter="engagement">Pertunangan</button>
+            </div>
+
+            <!-- Empty State (Hidden by default) -->
+            <div id="empty-state" class="hidden text-center py-20 text-gray-500 font-light">
+                <i class="ph ph-image-broken text-4xl mb-2"></i>
+                <p>Belum ada foto dalam kategori ini.</p>
+            </div>
+
+            <!-- Masonry Grid Container -->
+            <div id="gallery-grid" class="masonry-grid reveal">
+                <!-- Gallery items will be injected here by JavaScript -->
+            </div>
+            
+            <div class="text-center mt-12 reveal">
+                <a href="https://www.instagram.com/yunus_shoot1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm tracking-widest uppercase border border-gray-600 px-6 py-3 hover:bg-white hover:text-black transition">
+                    <i class="ph ph-instagram-logo text-lg"></i> Lihat Lebih Banyak di Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Placeholder Profile Image -->
+                <div class="lg:col-span-5 reveal">
+                    <div class="relative w-full aspect-[3/4] overflow-hidden border border-gray-800">
+                        <!-- Menggunakan foto dari aset yang ada sebagai placeholder profil sementara -->
+                        <img src="indah1.jpeg" alt="Yunus - Photographer" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 lg:pl-10 reveal">
+                    <h2 class="font-serif text-3xl md:text-5xl mb-6">Kisah di Balik Lensa</h2>
+                    <h3 class="text-xl text-gray-400 font-serif italic mb-8">Halo, Saya Yunus.</h3>
+                    
+                    <div class="space-y-6 text-gray-300 font-light leading-relaxed">
+                        <p>
+                            Berbasis di Indonesia, YUNUS SHOOT adalah wadah dedikasi saya dalam seni visual. Bagi saya, fotografi bukan sekadar menekan tombol rana, melainkan tentang menangkap emosi, keaslian, dan cerita tak terucap di balik setiap momen.
+                        </p>
+                        <p>
+                            Gaya fotografi saya berfokus pada pendekatan sinematik dan editorial—menggabungkan pencahayaan alami, komposisi yang cermat, dan sentuhan warna yang elegan untuk menghasilkan karya yang *timeless* (tak lekang oleh waktu).
+                        </p>
+                        <p>
+                            Baik itu hari pernikahan Anda yang sakral, momen kebersamaan keluarga, atau kebutuhan visual untuk brand Anda, saya berkomitmen untuk memberikan hasil gambar premium yang bisa Anda kenang selamanya.
+                        </p>
+                    </div>
+
+                    <div class="mt-10">
+                        <img src="logo.png" alt="Yunus Shoot Signature Logo" class="h-10 opacity-70">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-serif text-3xl md:text-5xl mb-4">Paket &amp; Harga</h2>
+                <div class="w-16 h-px bg-gray-500 mx-auto mb-6"></div>
+                <p class="text-gray-400 font-light">Pilih jenis acara untuk melihat pilihan paket. Klik paket untuk melanjutkan konsultasi.</p>
+            </div>
+
+            <div id="package-category-buttons" class="flex flex-wrap justify-center gap-3 mb-10" role="group" aria-label="Pilih jenis acara">
+                <!-- Kategori paket akan ditampilkan melalui JavaScript -->
+            </div>
+            <div id="package-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-live="polite">
+                <!-- Paket harga akan ditampilkan melalui JavaScript -->
+            </div>
+            <p class="mt-6 border-l-2 border-amber-200/70 pl-4 text-sm font-light leading-relaxed text-gray-400">
+                Catatan: Untuk lokasi yang jauh, mungkin ada biaya tambahan. Besaran biaya akan dikonfirmasi setelah lokasi diketahui.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-24 bg-brand-black border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h2 class="font-serif text-3xl md:text-5xl mb-6">Mari Ciptakan<br>Sesuatu yang Indah.</h2>
+                    <p class="text-gray-400 font-light mb-10 leading-relaxed">
+                        Tertarik untuk berkolaborasi atau mendiskusikan rencana pemotretan Anda? Isi formulir untuk memulai konsultasi. Saya akan segera merespons pesan Anda.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border border-gray-700 flex items-center justify-center rounded-full">
+                                <i class="ph ph-whatsapp-logo text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">WhatsApp</p>
+                                <p class="text-lg">+62 8593-4865-713</p> <!-- Update via Config JS -->
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border border-gray-700 flex items-center justify-center rounded-full">
+                                <i class="ph ph-instagram-logo text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">Instagram</p>
+                                <a href="https://www.instagram.com/yunus_shoot1" target="_blank" rel="noopener noreferrer" class="text-lg hover:text-gray-300">@yunus_shoot1</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border border-gray-700 flex items-center justify-center rounded-full">
+                                <i class="ph ph-facebook-logo text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">Facebook</p>
+                                <a href="https://www.facebook.com/yunusshoot" target="_blank" rel="noopener noreferrer" class="text-lg hover:text-gray-300">Yunus Shoot</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border border-gray-700 flex items-center justify-center rounded-full">
+                                <i class="ph ph-tiktok-logo text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">TikTok</p>
+                                <a href="https://www.tiktok.com/@yunus_shoot" target="_blank" rel="noopener noreferrer" class="text-lg hover:text-gray-300">@yunus_shoot</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border border-gray-700 flex items-center justify-center rounded-full">
+                                <i class="ph ph-envelope-simple text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">Email</p>
+                                <a href="mailto:yunusshoot1@gmail.com" class="text-lg hover:text-gray-300">yunusshoot1@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="bg-brand-dark p-8 md:p-10 rounded-sm reveal">
+                    <h3 class="font-serif text-2xl mb-8">Pesan Sesi Fotografi</h3>
+                    <form id="booking-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" required class="w-full pb-2 text-lg focus:border-white transition-colors" placeholder="Nama Lengkap Anda">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="service" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Jenis Layanan</label>
+                                <select id="service" required class="w-full pb-2 text-lg focus:border-white transition-colors appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Pilih Layanan</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Pre-Wedding">Pre-Wedding</option>
+                                    <option value="Engagement">Engagement</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="date" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Tanggal Pilihan</label>
+                                <input type="date" id="date" class="w-full pb-2 text-lg focus:border-white transition-colors cursor-pointer" style="color-scheme: dark;">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="location" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Lokasi</label>
+                            <input type="text" id="location" class="w-full pb-2 text-lg focus:border-white transition-colors" placeholder="Kota / Venue">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Ceritakan rencana Anda</label>
+                            <textarea id="message" rows="3" class="w-full pb-2 text-lg focus:border-white transition-colors resize-none" placeholder="Detail acara, konsep, dll..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 mt-4 bg-white text-black font-medium tracking-widest uppercase hover:bg-gray-200 transition duration-300 flex justify-center items-center gap-2">
+                            Kirim via WhatsApp <i class="ph-fill ph-whatsapp-logo text-xl text-green-600"></i>
+                        </button>
+                        <p class="text-xs text-gray-500 text-center mt-2 font-light">Formulir ini akan mengarahkan Anda ke aplikasi WhatsApp.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050505] py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <img src="logo.png" alt="Yunus Shoot Logo" class="h-10 opacity-80">
+                <p class="text-gray-500 text-sm font-light">Mengabadikan momen, merangkai cerita.</p>
+            </div>
+            
+            <div class="flex gap-6 text-gray-400">
+                <a href="https://www.instagram.com/yunus_shoot1" target="_blank" rel="noopener noreferrer" aria-label="Instagram Yunus Shoot" class="hover:text-white transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
+                <a href="https://www.facebook.com/yunusshoot" target="_blank" rel="noopener noreferrer" aria-label="Facebook Yunus Shoot" class="hover:text-white transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
+                <a href="https://www.tiktok.com/@yunus_shoot" target="_blank" rel="noopener noreferrer" aria-label="TikTok Yunus Shoot" class="hover:text-white transition"><i class="ph ph-tiktok-logo text-2xl"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-8 pt-8 border-t border-gray-800 text-center md:text-left text-xs text-gray-600 tracking-wider">
+            &copy; <span id="current-year"></span> YUNUS SHOOT. Hak cipta dilindungi.
+        </div>
+    </footer>
+
+    <!-- Lightbox (Hidden by default) -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[60] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-gray-400 focus:outline-none z-10">
+            <i class="ph ph-x text-3xl"></i>
+        </button>
+        
+        <!-- Navigation Buttons -->
+        <button id="lightbox-prev" class="absolute left-4 md:left-10 text-white hover:text-gray-400 focus:outline-none z-10">
+            <i class="ph ph-caret-left text-4xl md:text-5xl"></i>
+        </button>
+        
+        <button id="lightbox-next" class="absolute right-4 md:right-10 text-white hover:text-gray-400 focus:outline-none z-10">
+            <i class="ph ph-caret-right text-4xl md:text-5xl"></i>
+        </button>
+
+        <!-- Image Container -->
+        <div class="relative max-w-full max-h-full p-4 flex flex-col items-center justify-center">
+            <img id="lightbox-img" src="" alt="Enlarged Portfolio Image" class="lightbox-img rounded-sm shadow-2xl">
+            <!-- Caption -->
+            <div class="mt-4 text-center">
+                <p id="lightbox-category" class="text-sm text-gray-400 tracking-widest uppercase mt-1">Kategori</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-white text-black p-3 rounded-full opacity-0 pointer-events-none transition-all duration-300 hover:bg-gray-300 shadow-lg z-40 transform translate-y-10">
+        <i class="ph ph-arrow-up text-xl"></i>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
